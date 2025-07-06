@@ -1,0 +1,28 @@
+{
+  "name": "reminder-htmx-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev:css": "npx @tailwindcss/cli -i ./src/styles.css -o ./public/styles.css --minify --watch",
+    "dev:js": "vite build --watch",
+    "start:server": "./node_modules/nodemon/bin/nodemon.js server.js",
+    "start": "concurrently \"npm run dev:js\" \"npm run dev:css\"  \"npm run start:server\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
+  }
+}
